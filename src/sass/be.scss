@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Vollkorn', serif;
+    flex-direction: column;
+    height: 100%;
+}
+.cont {
+    display: flex;
+    justify-content: space-around;
+    background: #39687f;
+}
+.box1, .box2, .box3, .box4 {
+    margin: 0 auto;
+    padding: 50px;
+    width: 50%;
+    height: 400px;
+    background: #1b2125;
+    position: relative;
+    opacity: 0;
+    //transform: translateY(10px);
+    transition: all 0.5s ease-out;
+    &.fade-in {
+        opacity: 1;
+        //transform: translateY(0);
+    }
+}
+p {
+    color : #ededed;
+    width: 50%;
+    margin: 50px 50px 50px 0;
+    position: absolute;
+    top: 0;
+    left: -50px;
+}
