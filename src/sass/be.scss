@@ -1,32 +1,57 @@
+$red: #b3121d;
+$blue: #39687f;
+$black: #1b2125;
+$white: #ededed;
+$yell: #fdb927;
+$green: #009e60;
+
 * {
     margin: 0;
     padding: 0;
     font-family: 'Vollkorn', serif;
     flex-direction: column;
     height: 100%;
+    color: $white;
 }
-.cont {
-    display: flex;
-    justify-content: space-around;
-    background: #39687f;
+.intro {
+    height: 100%;
+    background: $red;
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 50px;
+        margin: 0 auto;
+        width: 50%;
+        height: 400px;
+        background: $black;
+    }
 }
-.box1, .box2, .box3, .box4 {
-    margin: 0 auto;
-    padding: 50px;
-    width: 50%;
-    height: 400px;
-    background: #1b2125;
+
+.main {
+    background: $blue;
+    margin: 0px auto;
+    padding: 100px 0;
+    height: 2000px;
     position: relative;
-    opacity: 0;
-    //transform: translateY(10px);
-    transition: all 0.5s ease-out;
-    &.fade-in {
-        opacity: 1;
-        //transform: translateY(0);
+    .box {
+        padding: 50px 0;
+        margin: 150px auto;
+        width: 50%;
+        height: 400px;
+        background: $black;
+        position: relative;
+        opacity: 0;
+        //transform: translateY(10px);
+        transition: all 0.5s ease-out;
+        &.fade-in {
+            opacity: 1;
+            //transform: translateY(0);
+        }
     }
 }
 p {
-    color : #ededed;
     width: 50%;
     margin: 50px 50px 50px 0;
     position: absolute;
