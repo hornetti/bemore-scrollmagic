@@ -72,9 +72,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	// configurare uglifyjs per la minificazione del javascript
-
 	grunt.registerTask('start', ['default', 'browserSync', 'watch']);
+
 	// rivedere il registerTask start per mancanza di sincronizzazione dei file html
-	
 	grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin', 'htmlmin', 'uglify']);
 };
